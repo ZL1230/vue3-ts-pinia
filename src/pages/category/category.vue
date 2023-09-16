@@ -70,7 +70,11 @@ const subCategoryList = computed(() => {
             <navigator class="more" hover-class="none">全部</navigator>
           </view>
           <view class="section">
-            <navigator v-for="goods in item.goods" :key="goods.id" class="goods" hover-class="none"
+            <navigator
+              v-for="goods in item.goods"
+              :key="goods.id"
+              class="goods"
+              hover-class="none"
               :url="`/pages/goods/goods?id=${goods.id}`">
               <image class="image" :src="goods.picture"></image>
               <view class="name ellipsis">{{ goods.name }}</view>
